@@ -1,5 +1,5 @@
 def gen_prime():
-	p = random_prime(2^16, False, 997)
+	p = random_prime(2^10, False, 103)
 	q = primitive_root(p)
 	print "Public Prime 'p'   : " + str(p)
 	print "Primitive Root 'q' : " + str(q)
@@ -11,14 +11,6 @@ def gen_keys(q, p):
 	print "Private Key 'a' : " + str(a)
 	print "Public Key 'A'  : " + str(A)
 	return [a, A]
-	
-def txt_to_num(msg):
-	indices = [ord(i) for i in msg]
-	return ZZ(indices, 256)
-
-def num_to_txt(num):
-	indices = num.digits(256)
-	return ''.join([chr(i) for i in indices])
 	
 def sign(p, a, A, B, msg):
 	for x in xrange(1, p-1):

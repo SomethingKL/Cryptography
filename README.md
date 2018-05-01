@@ -6,4 +6,4 @@ Large Prime     p : 1487<br/>
 Primitive Root  q : 5<br/>
 Public Key      A : 948
 
-##### Encrypted Message: ##### 10000110010100000000110100110011
+##### Encrypted Message: 10000110010100000000110100110011

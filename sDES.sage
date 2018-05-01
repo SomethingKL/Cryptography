@@ -12,7 +12,8 @@ def num_to_txt(num):
 
 def encrypt_sDES(msg, key):
 	plain_txt = bin.encoding(str(msg))
-	tmp = key.digits(base=2, padto=10)	
+	tmp = key.digits(base=2, padto=10)
+	tmp.reverse()
 	bin_key = sdes.list_to_string(tmp)
 	
 	cipher_text = sdes(plain_txt, bin_key, algorithm="encrypt")
@@ -21,6 +22,7 @@ def encrypt_sDES(msg, key):
 	
 def decrypt_sDES(txt, key):
 	tmp = key.digits(base=2, padto=10)
+	tmp.reverse()
 	bin_key = sdes.list_to_string(tmp)
 	
 	plain_txt = sdes(txt, bin_key, algorithm="decrypt")

@@ -35,3 +35,4 @@ def verify_sign(p, a, B, r, s, msg):
 	if tmp3 == tmp4:
 		return true
 	return false
+	
